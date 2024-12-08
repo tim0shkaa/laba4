@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кофейня</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .menu-section {
+      margin-bottom: 20px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .menu-item span {
+      margin-left: 10px;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Кофейня</h1>
+
+  <div>
+    <label for="surname">Фамилия:</label>
+    <input type="text" id="surname">
+  </div>
+  <div>
+    <label for="name">Имя:</label>
+    <input type="text" id="name">
+  </div>
+
+  <div class="menu-section">
+    <h3>Напитки</h3>
+    <div class="menu-item">
+      <input type="checkbox" id="espresso" data-price="80">
+      <span>Эспрессо (80р)</span>
+      <input type="number" class="quantity" id="espressoQty" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <input type="checkbox" id="americano" data-price="110">
+      <span>Американо (110р)</span>
+      <input type="number" class="quantity" id="americanoQty" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <input type="checkbox" id="latte" data-price="120">
+      <span>Латте (120р)</span>
+      <input type="number" class="quantity" id="latteQty" value="0" min="0">
+    </div>
+    <div class="menu-item">
+        <input type="checkbox" id="cappuccino" data-price="90">
+        <span>Каппучино (90р)</span>
+        <input type="number" class="quantity" id="cappuccinoQty" value="0" min="0">
+      </div>
+  </div>
+
+  <div class="menu-section">
+    <h3>Еда</h3>
+    <div class="menu-item">
+      <input type="checkbox" id="brownie" data-price="80">
+      <span>Шоколадный кекс (80р)</span>
+      <input type="number" class="quantity" id="brownieQty" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <input type="checkbox" id="tart" data-price="100">
+      <span>Яблочный тарт (100р)</span>
+      <input type="number" class="quantity" id="tartQty" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <input type="checkbox" id="cherry" data-price="90">
+      <span>Черничный кекс (90р)</span>
+      <input type="number" class="quantity" id="cherryQty" value="0" min="0">
+    </div>
+  </div>
+
+  <div class="total">
+    Итого: <span id="totalPrice">0</span> р.
+  </div>
+
+  <button id="makeOrder">Оформить заказ</button>
+
+  <script src="main.js"></script>
+</body>
+</html>

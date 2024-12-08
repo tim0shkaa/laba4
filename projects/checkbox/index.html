@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подсчет стоимости товаров</title>
+</head>
+<body>
+  <h3>Выберите товары:</h3>
+  <form id="products-form">
+    <label>
+      <input type="checkbox" class="product" value="120">
+      Пирог с яблоком - 120р
+    </label><br>
+    <label>
+      <input type="checkbox" class="product" value="80">
+      Шоколадный кекс - 80р
+    </label><br>
+    <label>
+      <input type="checkbox" class="product" value="180">
+      Чизкейк - 180р
+    </label><br>
+    <button id="calculate-button" type="button">Выбрать</button>
+  </form>
+  <p>Общая стоимость: <span id="total-price">0</span> руб</p>
+
+  <script src="main.js"></script>
+</body>
+</html>
